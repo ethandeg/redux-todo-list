@@ -5,6 +5,8 @@ function todoReducer(state=INITIAL_STATE, action){
             return {...state, todos: [...state.todos, action.payload]}
         case "REMOVE":
             return {...state, todos: state.todos.filter(todo => todo.id !== action.payload.id)}
+        case "COMPLETE":
+            const todo = state.todos.filter(todo => todo.id === action.payload.id)[0]
         default:
             return state
     }

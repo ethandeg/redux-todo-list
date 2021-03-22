@@ -22,7 +22,7 @@ const AddTodoForm = () => {
     }
 
     return (
-        <div className="card col-6">
+        <div className="card col-6 my-3" style={{marginLeft: "auto", transform: "TranslateX(-50%)"}}>
             <div className="card-body">
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
